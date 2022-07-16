@@ -130,8 +130,8 @@ public class StartGame {
         player1.setFoodLevel(20);
         player2.setFoodLevel(20);
         if (configManager.isChangeGameModeWhenGameStarts()) {
-            player1.setGameMode(GameMode.SURVIVAL);
-            player2.setGameMode(GameMode.SURVIVAL);
+            player1.setGameMode(GameMode.ADVENTURE);
+            player2.setGameMode(GameMode.ADVENTURE);
         }
 
         arena.start(pn1, pn2, startWay);

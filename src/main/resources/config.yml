@@ -57,7 +57,7 @@ AutoSaveCachesTime: 600
 Message:
   # The prefix of all message
   # 消息前缀
-  Prefix: '&8&l[&bPVP&8&l] '
+  Prefix: '&8[&x&0&0&9&6&8&8单挑&8] '
   # The default language environment(The custom language files can be found at plugins\Dantiao\Languages)
   # English language file is available.Just change this item to 'en'
   # Lang: 'en'
@@ -133,7 +133,7 @@ WorldWhitelist:
 Hologram:
   # The hologram plugin which is used to hold the hologram ranking
   # 用于显示全息排行榜的全息插件
-  Plugin: TrHologram
+  Plugin: HolographicDisplays
   # The time interval in seconds for automatically refreshing hologram
   # 全息图刷新的时间间隔（单位为秒）
   RefreshInterval: 300
@@ -176,8 +176,7 @@ Game:
     # Ban the item which you don't want to be brought to arena
     # 设置禁止带入竞技场的物品。Material代表禁止指定材质的物品；Lore代表禁止含有指定描述文字的物品
     ItemLimit:
-      Material:
-      - SNOW_BALL
+      Material: []
       Lore:
       - '&aTest lore'
   Process:
@@ -198,9 +197,7 @@ Game:
     TimeOut: 300
     # The whitelist of commands.If the command player types in the game contains the following sentence,it will be allowed
     # 指令白名单。如果玩家在比赛时输入的指令包含以下的字符，指令则会被允许执行
-    CommandWhitelist:
-      - '/dantiao test_whitelist_command1'
-      - '/dantiao test_whitelist_command2'
+    CommandWhitelist: []
   Finish:
     # When a player's winning streak times reaches this value or more than it,a congratulation message will be broadcast
     # 比赛结束后，若某玩家的连胜数达到或超过这个值，则会全服广播
@@ -307,7 +304,7 @@ Dan:
     # 是否在聊天时展示段位前缀
     # 如果你服务器装载了聊天插件（如TrChat,MiaoChat等），那本功能将会被屏蔽
     # 当然，你仍然可以通过PAPI变量让在聊天时展示自己的段位，本插件PAPI变量表请查阅文档
-    Show: true
+    Show: false
     # The context of DUEL LEVEL prefix when a player's DUEL LEVEL is zero
     # For example:
     # InitialDanName: '&7[DUEL LEVEL 0]'

@@ -15,6 +15,7 @@ import com.valorin.teleport.ToLogLocation;
 import com.valorin.util.Debug;
 import com.valorin.util.ViaVersion;
 import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
@@ -193,8 +194,12 @@ public class FinishGame {
             ArenaEventAbs event;
             if (isDraw) {
                 event = new ArenaDrawFinishEvent(winner, loser, arena);
+                winner.setGameMode(GameMode.SURVIVAL);
+                loser.setGameMode(GameMode.SURVIVAL);
             } else {
                 event = new ArenaFinishEvent(winner, loser, arena);
+                winner.setGameMode(GameMode.SURVIVAL);
+                loser.setGameMode(GameMode.SURVIVAL);
             }
             Bukkit.getScheduler().runTask(Main.getInstance(), () ->
                     Bukkit.getServer().getPluginManager().callEvent(event)
