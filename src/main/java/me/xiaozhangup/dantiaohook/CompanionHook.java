@@ -20,12 +20,16 @@ public class CompanionHook implements Listener {
     public static void onStrart(ArenaStartEvent e) {
         if (CAPI.isSummoned(e.getPlayer1())) {
             comp.put(e.getPlayer1().getUniqueId() , getActiveCompanionName(e.getPlayer1()));
+            PlayerData.instanceOf(e.getPlayer1()).removeCompanion();
+            PlayerData.instanceOf(e.getPlayer1()).setActiveCompanionName("NONE");
         } else {
             comp.put(e.getPlayer1().getUniqueId() , null);
         }
 
         if (CAPI.isSummoned(e.getPlayer2())) {
             comp.put(e.getPlayer2().getUniqueId() , getActiveCompanionName(e.getPlayer2()));
+            PlayerData.instanceOf(e.getPlayer2()).removeCompanion();
+            PlayerData.instanceOf(e.getPlayer2()).setActiveCompanionName("NONE");
         } else {
             comp.put(e.getPlayer2().getUniqueId() , null);
         }
