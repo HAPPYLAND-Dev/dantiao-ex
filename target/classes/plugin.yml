@@ -1,6 +1,6 @@
 name: Dantiao
 main: com.valorin.Main
-version: ${project.version}
+version: EX-31
 author: Valorin
 api-version: 1.13
 softdepend: [HolographicDisplays, PlaceholderAPI, TrHologram, Companions]

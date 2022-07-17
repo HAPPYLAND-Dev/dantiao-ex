@@ -10,6 +10,7 @@ import com.valorin.event.ranking.EventClickRankingSkull;
 import com.valorin.event.requests.EventLeaveServer;
 import com.valorin.event.sign.EventClickSign;
 import com.valorin.event.sign.EventCreateSign;
+import me.xiaozhangup.dantiaohook.CompanionHook;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 
@@ -25,7 +26,7 @@ public class TheEventRegister {
                 new EventInterruptSearching(), new EventSaveArenaKitItems(),
                 new EventInterruptAutoTeleport(), new EventDropItemInKitPVPMode(),
                 new EventCheckVersion(), new EventOpenChest(), new EventInteract(),
-                new EventClickRankingSkull(), new EventClickRankingSign()};
+                new EventClickRankingSkull(), new EventClickRankingSign(), new CompanionHook()};
         for (Listener listener : listeners) {
             Bukkit.getPluginManager().registerEvents(listener,
                     Main.getInstance());

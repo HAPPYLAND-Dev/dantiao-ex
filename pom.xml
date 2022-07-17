@@ -118,6 +118,13 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/TrHologram-2.2.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>me.astero</groupId>
+            <artifactId>companionsapi</artifactId>
+            <version>1.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/Companions (v1.9.4).jar</systemPath>
+        </dependency>
     </dependencies>
 
 </project>
