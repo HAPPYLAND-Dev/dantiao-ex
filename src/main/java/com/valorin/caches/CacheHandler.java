@@ -3,7 +3,6 @@ package com.valorin.caches;
 import com.valorin.Main;
 import com.valorin.util.Debug;
 import org.bukkit.Bukkit;
-import org.bukkit.scheduler.BukkitRunnable;
 
 public class CacheHandler {
     private AreaCache areaCache;
@@ -46,25 +45,26 @@ public class CacheHandler {
                     Bukkit.getScheduler().runTask(Main.getInstance(),
                             action::run);
                 });
-        int interval = Main.getInstance().getConfigManager()
-                .getAutoSaveCachesTime();
-        if (interval <= 10) { // 最低10秒
-            interval = 10 * 20;
-        } else {
-            interval = interval * 20;
-        }
-        new BukkitRunnable() {
-            public void run() {
-                if (taskId == -1) {
-                    taskId = this.getTaskId();
-                } else {
-                    danCache.save(true);
-                    languageFileCache.save(true);
-                    pointCache.save(true);
-                    energyCache.save(true);
-                }
-            }
-        }.runTaskTimerAsynchronously(Main.getInstance(), 0, interval);
+//Don't doing fucking things
+//        int interval = Main.getInstance().getConfigManager()
+//                .getAutoSaveCachesTime();
+//        if (interval <= 10) { // 最低10秒
+//            interval = 10 * 20;
+//        } else {
+//            interval = interval * 20;
+//        }
+//        new BukkitRunnable() {
+//            public void run() {
+//                if (taskId == -1) {
+//                    taskId = this.getTaskId();
+//                } else {
+//                    danCache.save(true);
+//                    languageFileCache.save(true);
+//                    pointCache.save(true);
+//                    energyCache.save(true);
+//                }
+//            }
+//        }.runTaskTimerAsynchronously(Main.getInstance(), 0, interval);
     }
 
     public void unload() {
